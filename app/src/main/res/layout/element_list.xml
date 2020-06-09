@@ -6,15 +6,23 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#fff"
+    android:background="@drawable/border"
     android:clickable="true"
     android:id="@+id/menu_id">
-
-    <Button
-      android:id="@+id/menu_name"
-      android:layout_width="match_parent"
+    <ImageView
+      android:id="@+id/menu_image"
+      android:layout_width="0dp"
+      android:layout_weight="1"
       android:layout_height="100dp"
-      android:textSize="60sp"/>
+      android:scaleType="centerInside"
+      android:layout_margin="5dp"/>
+    <TextView
+      android:id="@+id/menu_name"
+      android:layout_width="0dp"
+      android:layout_weight="3"
+      android:layout_height="100dp"
+      android:textSize="60sp"
+      android:gravity="center"/>
   </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

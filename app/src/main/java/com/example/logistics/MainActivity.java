@@ -3,13 +3,17 @@ package com.example.logistics;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import java.util.Date;
+import java.util.List;
 import org.litepal.LitePal;
+import org.litepal.crud.LitePalSupport;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,9 +36,22 @@ public class MainActivity extends AppCompatActivity {
         Item item = new Item();
         item.setI_id(111);
         item.setI_name("口罩");
-        item.setPress("1");
         item.save();
         Toast.makeText(MainActivity.this,"添加数据",Toast.LENGTH_SHORT).show();
+      }
+    });
+    Button button3 = (Button)findViewById(R.id.button3);
+    button3.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        List<Item> itemList = LitePal.findAll(Item.class);
+        Toast.makeText(v.getContext(),"读取数据",Toast.LENGTH_SHORT).show();
+        if(itemList==null){
+          Toast.makeText(v.getContext(),"数据库为空",Toast.LENGTH_SHORT).show();
+        }
+        for(Item item:itemList){
+          Log.d("sssss: ", item.getI_name()+" "+item.getI_id());
+        }
       }
     });
 

@@ -24,6 +24,7 @@
         android:paddingLeft="20dp"
         android:text="口罩      物品ID:000"
         android:layout_gravity="center_vertical"/>
+
       <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
