@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ShipActivity">
+  <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <include layout="@layout/title"/>
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      android:text="物流号:"
+      android:paddingLeft="10dp"/>
+    <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="40dp">
+      <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="赵xx"
+        android:textColor="@android:color/black"
+        android:textSize="30sp"
+        android:gravity="center"
+        />
+      <TextView
+        android:id="@+id/ship_phone"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:text="联系电话:33333"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="15sp"
+        android:clickable="true"/>
+    </LinearLayout>
+    <Button
+      android:id="@+id/ship_button"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:text="查看详情"
+      android:gravity="center"
+      android:textSize="15sp"/>
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
