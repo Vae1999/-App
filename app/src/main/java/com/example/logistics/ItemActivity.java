@@ -56,5 +56,14 @@ public class ItemActivity extends AppCompatActivity {
         startActivity(intent);
       }
     });
+
+    Button titleAdd = (Button)findViewById(R.id.title_add);
+    titleAdd.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(ItemActivity.this,ItemAddActivity.class);
+        startActivity(intent);
+      }
+    });
   }
 }

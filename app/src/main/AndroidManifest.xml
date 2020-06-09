@@ -10,7 +10,8 @@
     android:roundIcon="@mipmap/ic_launcher_round"
     android:supportsRtl="true"
     android:theme="@style/AppTheme">
-    <activity android:name=".ShipPositionActivity"></activity>
+    <activity android:name=".ItemAddActivity"></activity>
+    <activity android:name=".ShipPositionActivity" />
     <activity android:name=".NeedPlaceActivity" />
     <activity android:name=".Need_iActivity" />
     <activity android:name=".Store_iActivity" />
